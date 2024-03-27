@@ -18,8 +18,8 @@ COPY . /comps/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Binding a port
-EXPOSE 8000
+# EXPOSE 8000
 
 # Command to run the app
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+CMD ["runserver", "0.0.0.0:$PORT}"]
