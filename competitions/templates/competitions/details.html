@@ -1,0 +1,44 @@
+{% extends "core/base.html" %}
+{% block title%}{{competition.name}}{% endblock %}
+
+{% block content %}
+<div class = "grid grid-cols-5 gap-6">
+    <div class="col-span-2">
+        <img  src = "{{competition.image.url}}" class = "p-10 rounded-xl">
+    </div>
+    <div class="col-span-3">
+        <h1 class = "text-3xl font-bold">{{competition.name}}</h1>
+        <p class = "text-xl font-semibold text-gray-500">{{competition.category}}</p>
+        
+        <p class = "text-xl font-semibold text-gray-500">Notified by: {{competition.created_by}}</p>
+        
+        {% if competition.description %}
+            <p class = "text-xl font-semibold mt-4">Description: {{competition.description}}</p>
+        {% endif %}
+        <!--
+        {% if request.user == competition.created_by %}
+            <a href = "#" class = "mt-6 block w-1/4 px-4 py-2 text-center text-white bg-blue-500 rounded-xl">Edit</a>
+            <a href = "#" class = "mt-6 block w-1/4 px-4 py-2 text-center text-white bg-red-500 rounded-xl">Delete</a>
+        {% endif %}
+        -->
+    </div>
+</div>
+
+<div class = "mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class = "mb-12 text-2xl text-center">Similar Competitions</h2>
+    <div class = "grid grid-cols-3 gap-3">
+        {% for competition in similar_competitions %}
+        <div>
+            <a href = "{% url 'competition:detail' competition.id %}">
+                <div>
+                    <img src = "{{competition.image.url}}" class = "rounded-xl" width = "350">
+                </div>
+                <div class = "p-6 bg-white rounded-b-xl" width = "350">
+                    <h2 class = "text-2xl">{{competition.name}}</h2>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

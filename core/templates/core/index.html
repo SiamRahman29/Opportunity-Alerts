@@ -1,0 +1,25 @@
+{% extends 'core/base.html'%}
+{% block title %}Competition Alerts{% endblock %}
+{% block content %}
+    <h1>Hold your horses and horses hold your breath!</h1>
+    <p>These are the upcoming competitions</p>
+    <br>
+    <div class = "grid grid-cols-1 gap-3">
+            
+        {% for competition in competitions %}
+        <div class = "flex items-center">
+            <a href = "{%url 'competition:detail' competition.id %}" class="flex no-underline text-xl">
+                
+                <img src = "{{competition.image.url}}" width = "100" height = "auto" class = "mr-3">
+                
+                <div>
+                    <p class="mb-1 {% if competition.has_passed == True %} text-red-500{% else %}text-green-500{%endif%}">{{competition.name}}</p>
+                    <p class="text-lg text-gray-500">{{competition.category}}</p>
+                </div>
+            </a>
+        </div> 
+        
+        {% endfor %}
+    </div>
+
+{% endblock %}
