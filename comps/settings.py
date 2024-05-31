@@ -30,6 +30,9 @@ ALLOWED_HOSTS = [
     "ec2-54-254-211-186.ap-southeast-1.compute.amazonaws.com",
     "localhost"
 ]
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 
 # Application definition

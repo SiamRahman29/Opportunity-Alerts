@@ -15,12 +15,19 @@
             <a href = "/" class = "text-xl font-semibold text-white">Competitions, Scholarships, and etc.</a>
 
             <div class = "space-x-6">
-                <a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100">Add Competition</a>
+                <a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100" >Add Competition</a>
                 <!--<a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100">Find Competition</a>-->
+                <form id="logout-form" action="{% url 'core:logout' %}" method="post" style="display: none;">
+                    {% csrf_token %}
+                    
+                </form>
                 {% if request.user.is_authenticated%}
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Dashboard</a>     
+                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Dashboard</a>
+
+                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-red-700" onclick="document.getElementById('logout-form').submit(); return false;">Sign Out</a>     
                 {%else%}
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Log In</a>
+                    <a href = "{%url 'core:login'%}" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Log In</a>
+                    <a href = "{%url 'core:signup'%}" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Sign Up</a>
 
                 {%endif%}
                     <!--
