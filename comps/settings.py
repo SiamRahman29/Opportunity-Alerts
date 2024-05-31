@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "54.254.211.186",
     "ec2-54-254-211-186.ap-southeast-1.compute.amazonaws.com",
-    "localhost"
+    "localhost",
+    "ec2-54-255-244-103.ap-southeast-1.compute.amazonaws.com"
 ]
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/"
