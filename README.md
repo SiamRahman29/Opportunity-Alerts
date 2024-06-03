@@ -20,6 +20,8 @@ improvements. You can contribute to creating features, updating features, organi
 You can even contribute by becoming a volunteer and adding new opportunity information on the site. You can also share any opportunity news you may have directly to me or a 
 volunteer you know to have it added to the site.
 
+If you have any questions about it, you can email me directly. You can find the email address in the next section.
+
 <h2>Getting in Touch</h2>
 
 If you have any questions, concerns, suggestions about the project or want to buy me a glass of mango juice: you can email me at siam@graduate.utm.my. 
