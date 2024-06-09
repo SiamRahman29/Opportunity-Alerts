@@ -15,7 +15,7 @@
             <a href = "/" class = "text-xl font-semibold text-white">Opportunity Octopus</a>
 
             <div class = "space-x-6">
-                <a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100" >Add Competition</a>
+                <a href = "{% url 'core:unavailable'%}" class = "text-lg font-semibold text-white hover: text-slate-100" >Add Competition</a>
                 <!--<a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100">Find Competition</a>-->
                 <form id="logout-form" action="{% url 'core:logout' %}" method="post" style="display: none;">
                     {% csrf_token %}

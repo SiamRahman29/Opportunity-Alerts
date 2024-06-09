@@ -11,6 +11,8 @@ def index(request):
     })
 def contact(request):
     return render(request, 'core/contact.html')
+def unavailable(request):
+    return render(request, 'core/unavailable.html')
 def about(request):
     return render(request, 'core/about.html')
 
