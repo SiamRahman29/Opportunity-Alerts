@@ -32,36 +32,6 @@
         </style>
     </head>
     <body>
-        <nav class = "py-6 px-6 flex justify-between items-center border-b border-gray-200 bg-sky-800">
-            <a href = "/" class = "text-xl font-semibold text-white">Opportunity Octopus</a>
-
-            <div class = "space-x-6">
-                <a href = "{% url 'core:unavailable'%}" class = "text-lg font-semibold text-white hover: text-slate-100" >Add Competition</a>
-                <!--<a href = "#" class = "text-lg font-semibold text-white hover: text-slate-100">Find Competition</a>-->
-                <form id="logout-form" action="{% url 'core:logout' %}" method="post" style="display: none;">
-                    {% csrf_token %}
-                    
-                </form>
-                {% if request.user.is_authenticated%}
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Dashboard</a>
-
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-red-700" onclick="document.getElementById('logout-form').submit(); return false;">Sign Out</a>     
-                {%else%}
-                    <a href = "{%url 'core:login'%}" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Log In</a>
-                    <a href = "{%url 'core:signup'%}" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-orange-500 hover:bg-gray-700">Sign Up</a>
-
-                {%endif%}
-                    <!--
-                {% if request.user.is_authenticated%}    
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-teal-500 hover:bg-teal-700">Dashboard</a>
-                    <a href = "#" class = "px-6 py-3 text-lg font-semibold text-white rounded-xl bg-gray-500 hover:bg-gray-700">Inbox</a>
-                {%else%}
-                    
-                {%endif%}
-                -->
-            
-        </nav>
-        
         <svg xmlns="http://www.w3.org/2000/svg" width="1226.887px" height="908px" viewBox="0 0 1226.887 908">
         <g id="water">
         <path id="leftWater" fill="#00B6FF" d="M1226.887,908H1887V330.333c0,0-17.78-23.951-43.113-23.951s-50.667,32.724-144.667,32.724
