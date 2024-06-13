@@ -29,7 +29,7 @@
     <div class = "grid grid-cols-3 gap-3">
         {% for competition in similar_competitions %}
         <div>
-            <a href = "{% url 'competition:detail' competition.id %}">
+            <a href = "{% url 'competitions:detail' competition.id %}">
                 <div>
                     <img src = "{{competition.image.url}}" class = "rounded-xl" width = "350">
                 </div>

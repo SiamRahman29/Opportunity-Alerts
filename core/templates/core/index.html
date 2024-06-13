@@ -8,7 +8,7 @@
             
         {% for competition in competitions %}
         <div class = "flex items-center">
-            <a href = "{%url 'competition:detail' competition.id %}" class="flex no-underline text-xl">
+            <a href = "{%url 'competitions:detail' competition.id %}" class="flex no-underline text-xl">
                 
                 <img src = "{{competition.image.url}}" width = "100" height = "auto" class = "mr-3">
                 
