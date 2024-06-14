@@ -16,7 +16,8 @@ class NewItemForm(forms.ModelForm):
                 'class': INPUT_CLASSES
             }),
             'deadline': forms.DateInput(attrs={
-                'class': INPUT_CLASSES
+                'class': INPUT_CLASSES,
+                
             }),
             'image': forms.FileInput(attrs={
                 'class': INPUT_CLASSES
