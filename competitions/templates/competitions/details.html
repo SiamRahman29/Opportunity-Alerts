@@ -2,27 +2,28 @@
 {% block title%}{{competition.name}}{% endblock %}
 
 {% block content %}
-<div class = "grid grid-cols-5 gap-6">
-    <div class="col-span-2">
-        <img  src = "{{competition.image.url}}" class = "p-10 rounded-xl">
+<div class="md:flex md:gap-6">
+    <div class="md:w-2/5 mb-6 md:mb-0">
+        <img src="{{ competition.image.url }}" class="w-full p-4 rounded-xl">
     </div>
-    <div class="col-span-3">
-        <h1 class = "text-3xl font-bold">{{competition.name}}</h1>
-        <p class = "text-xl font-semibold text-gray-500">{{competition.category}}</p>
-        
-        <p class = "text-xl font-semibold text-gray-500">Notified by: {{competition.created_by}}</p>
+    <div class="md:w-3/5 flex flex-col justify-center">
+        <h1 class="text-3xl font-bold order-2 md:order-1">{{ competition.name }}</h1>
+        <p class="text-xl font-semibold text-gray-500 order-3 md:order-2">{{ competition.category }}</p>
+        <p class="text-xl font-semibold text-gray-500 order-4 md:order-3">Notified by: {{ competition.created_by }}</p>
         
         {% if competition.description %}
-            <p class = "text-xl font-semibold mt-4">Description: {{competition.description}}</p>
+            <p class="text-xl font-semibold mt-4 order-5 md:order-4">Description: {{ competition.description }}</p>
         {% endif %}
+        
         <!--
         {% if request.user == competition.created_by %}
-            <a href = "#" class = "mt-6 block w-1/4 px-4 py-2 text-center text-white bg-blue-500 rounded-xl">Edit</a>
-            <a href = "#" class = "mt-6 block w-1/4 px-4 py-2 text-center text-white bg-red-500 rounded-xl">Delete</a>
+            <a href="#" class="mt-6 block w-1/4 px-4 py-2 text-center text-white bg-blue-500 rounded-xl order-6">Edit</a>
+            <a href="#" class="mt-6 block w-1/4 px-4 py-2 text-center text-white bg-red-500 rounded-xl order-7">Delete</a>
         {% endif %}
         -->
     </div>
 </div>
+
 
 <div class = "mt-6 px-6 py-12 bg-gray-100 rounded-xl">
     <h2 class = "mb-12 text-2xl text-center">Similar Competitions</h2>
