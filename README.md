@@ -7,7 +7,7 @@ contributing to open source GitHub projects.
 
 <h2>Instructions on Running the Project</h2>
 
-The project is currently being deployed via an AWS server <a href = "http://ec2-54-255-244-103.ap-southeast-1.compute.amazonaws.com:8000/">here</a>.
+The project is currently being deployed via an AWS server <a href = "http://ec2-54-255-244-103.ap-southeast-1.compute.amazonaws.com:8000/">here</a> (Sorry it's down currently. I'm sorting out my AWS bills and my student account😭).
 
 If you want to run it locally, the easiest way is via Docker. Set up Docker on your local machine (Docker Desktop for Windows). Then from the project's directory,
 open a terminal and run "sudo docker compose up" without the quotations.
